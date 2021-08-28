@@ -39,7 +39,6 @@ dl_config_shell(){
         touch $config_shell_path
     fi
     curl -s --connect-timeout 3 https://raw.githubusercontent.com/UUSWDUU/VIP/main/Conf/Qinglong/config.sample.sh > $config_shell_path
-    https://raw.githubusercontent.com/UUSWDUU/VIP/
     cp $config_shell_path $dir_config/config.sh
     # 判断是否下载成功
     config_size=$(ls -l $config_shell_path | awk '{print $5}')
