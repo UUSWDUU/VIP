@@ -340,7 +340,7 @@ echo -e "\n"
 if [ "$access" != "2" ]; then
     if [ "$(grep -c "token" $CONFIG_PATH/auth.json)" != 0 ]; then
         log "7.开始青龙内部配置"
-        docker exec -it $CONTAINER_NAME bash -c "$(curl -fsSL https://gitee.com/allin1code/a1/raw/master/1customCDN.sh)"
+        docker exec -it $CONTAINER_NAME bash -c "$(curl -fsSL https://raw.githubusercontent.com/UUSWDUU/VIP/main/Scripts/sh/1customCDN.sh)"
     else
         warn "7.未检测到 token，取消内部配置"
     fi
